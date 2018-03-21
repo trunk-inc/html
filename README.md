@@ -67,3 +67,26 @@
 <a href="/">sample</a>
 <img src="google.png" alt="Google">
 ```
+
+
+***
+
+
+<h2 id="text_size">HTMLクォーテーション</h2>
+
+- 属性値を引用するときは、ダブルクォーテーション（二重引用符）を使用する。
+- 属性値の前後にはシングルクォーテーション（ ' ）ではなく、ダブルクォーテーション（ " ）を推奨する。
+
+```
+<NG>
+<a class='sample-name'>sample</a>
+<img src='./img/........'>
+ 
+<OK>
+<a class="sample-name">sample</a>
+<img> src="./img/........">
+```
+
+
+***
+
