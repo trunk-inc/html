@@ -2,6 +2,7 @@
 
 ## 概要
 基本的にgoogleのコーディング規約に則る
+TURNKはテンプレートエンジンである`slim`でマークアップしていく。
 [google公式のガイド](https://google.github.io/styleguide/htmlcssguide.html)
 
 
@@ -61,12 +62,12 @@
 
 ```
 <NG>
-<A HREF="/">sample</A>
-<IMG SRC="google.png" ART="Google">
+A.sample HREF="#"
+IMG SRC="images/google.png" alt="google"
  
 <OK>
-<a href="/">sample</a>
-<img src="google.png" alt="Google">
+a.sample href="/"
+img src="images/google.png" alt="google"
 ```
 
 
@@ -80,12 +81,12 @@
 
 ```
 <NG>
-<a class='sample-name'>sample</a>
-<img src='./img/........'>
+a href='#'
+img src'images/google.png' alt='google'
  
 <OK>
-<a class="sample-name">sample</a>
-<img> src="./img/........">
+a href="#"
+img src"images/google.png" alt="google"
 ```
 
 
