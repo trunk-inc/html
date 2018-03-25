@@ -11,6 +11,7 @@ TURNKはテンプレートエンジンである`slim`でマークアップして
  1. [インデント](#indent)
  1. [大文字/小文字](#text_size)
  1. [HTMLクォーテーション](#quotes_html)
+ 1. [type属性](#type)
 
 <h2 id="validate">HTTPSプロトコル</h2>
 
@@ -20,10 +21,10 @@ TURNKはテンプレートエンジンである`slim`でマークアップして
 <NG>
 <!-- プロトコルを省略 -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
- 
+
 <!-- HTTPプロトコルを使用 -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
- 
+
 <OK>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 ```
@@ -42,8 +43,8 @@ TURNKはテンプレートエンジンである`slim`でマークアップして
 .sample
     .sample
       | hogehoge
-     .sample      
-     
+     .sample
+
 <OK>
 .sample
   .sample
@@ -64,7 +65,7 @@ TURNKはテンプレートエンジンである`slim`でマークアップして
 <NG>
 A.sample HREF="#"
 IMG SRC="images/google.png" alt="google"
- 
+
 <OK>
 a.sample href="/"
 img src="images/google.png" alt="google"
@@ -83,11 +84,28 @@ img src="images/google.png" alt="google"
 <NG>
 a href='#'
 img src'images/google.png' alt='google'
- 
+
 <OK>
 a href="#"
 img src"images/google.png" alt="google"
 ```
 
+
+***
+
+<h2 id="type">type属性</h2>
+
+- typeスタイルシートとスクリプトの属性を省略します。
+- typeスタイルシート（CSSを使用しない限り）とスクリプト（JavaScriptを使用していない場合を除く）には属性を使用しない。
+
+```
+<NG>
+link rel="stylesheet" href="./stylesheet/common.css" type="text/css"
+script src="js/main.js" type="text/javascript"
+
+<OK>
+link rel="stylesheet" href="./stylesheet/common.css"
+script src="js/main.js"
+```
 
 ***
