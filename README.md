@@ -15,6 +15,7 @@
  1. [HTMLクォーテーション](#quotes_html)
  1. [type属性](#type)
  1. [ymlのルール](#yml)
+ 1. [画像の指定方法](#image_tag)
 
 
 ## フォーマット
@@ -178,3 +179,30 @@ script src="js/main.js"
 .sample
   = t('hoge.hoge')
 ```
+
+***
+
+<h3 id="image_tag">画像の読み込み(image_tag)</h3>
+
+- `img`タグは使わない
+- `image_tag`で指定する
+- サイズを指定したい場合は`size: "〇〇x〇〇"`で指定する
+- `alt`は必ずつける `alt`が必要でない画像の場合は`alt=""`と指定する
+
+例)
+
+```
+/* DBなどサーバーから取得するものなど */
+.sample
+  = image_tag student.secure_icon, size: "60x60"
+
+/* 相対パスで取得するもの */
+.sample
+  = image_tag "camp/sample.png", alt:"sample"
+
+/* 絶対パスで取得するもの */
+.sample
+  = image_tag "http://sample.png", alt:"sample", class: 'sample sample2'
+```
+
+***
