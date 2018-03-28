@@ -211,5 +211,7 @@ script src="js/main.js"
 ### 画像ファイルの命名規則
 
 - [参考](https://qiita.com/okamoai/items/82eff25436fbbafaa063)
-
+- アイコン系や単色のものは`svg`
+- べた塗り系またはイラスト系は`png`
+- 高解像度で色数が多く写真系は、`jpg`
 
