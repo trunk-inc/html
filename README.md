@@ -7,7 +7,6 @@
 - TURNKはテンプレートエンジンである`slim`でマークアップしていく。
 - [google公式のガイド](https://google.github.io/styleguide/htmlcssguide.html)
 
-
 ## 目次
  1. [プロトコル](#protocol)
  1. [インデント](#indent)
@@ -194,7 +193,7 @@ script src="js/main.js"
 ```
 /* DBなどサーバーから取得するものなど */
 .sample
-  = image_tag student.secure_icon, size: "60x60"
+  = image_tag student.hogehoge_icon, size: "60x60"
 
 /* 相対パスで取得するもの */
 .sample
@@ -206,3 +205,11 @@ script src="js/main.js"
 ```
 
 ***
+
+## その他
+
+### 画像ファイルの命名規則
+
+- [参考](https://qiita.com/okamoai/items/82eff25436fbbafaa063)
+
+
