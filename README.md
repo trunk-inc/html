@@ -210,7 +210,8 @@ script src="js/main.js"
 
 ### 画像ファイルの命名規則
 
-- [参考](https://qiita.com/okamoai/items/82eff25436fbbafaa063)
+- [画像ファイルの命名規則](https://qiita.com/okamoai/items/82eff25436fbbafaa063)
+- [SVGと画像ファイルの容量の差を検証-2 〜PNG,GIF追記〜](http://blog.asial.co.jp/1109)
 - アイコン系や単色のものは`svg`
 - べた塗り系またはイラスト系は`png`
 - 高解像度で色数が多く写真系は、`jpg`
