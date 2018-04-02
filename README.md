@@ -2,20 +2,22 @@
 
 ## 概要
 - 基本的にgoogleのコーディング規約に則る
-
-## フォーマット
 - TURNKはテンプレートエンジンである`slim`でマークアップしていく。
 - [google公式のガイド](https://google.github.io/styleguide/htmlcssguide.html)
 
 ## 目次
- 1. [プロトコル](#protocol)
- 1. [インデント](#indent)
- 1. [大文字/小文字](#text_size)
- 1. [HTMLクォーテーション](#quotes_html)
- 1. [type属性](#type)
- 1. [ymlのルール](#yml)
- 1. [画像の指定方法](#image_tag)
+  1. [プロトコル](#protocol)
+  1. [インデント](#indent)
+  1. [HTMLクォーテーション](#quotes_html)
+  1. [type属性](#type)
+  1. [ymlのルール](#yml)
+  1. [画像の指定方法](#image_tag)
 
+  ### slimのルール
+  1. [divのショートカット](#div_shortcut)
+  1. [コメントの書き方](#comment)
+  1. [文字列の記述](#text)
+  1. [タグの大文字/小文字](#text_size)
 
 ## フォーマット
 
@@ -60,26 +62,6 @@
 
 
 ***
-
-
-<h3 id="text_size">大文字/小文字</h3>
-
-- 小文字のみを使用する。
-- HTML要素名、属性、属性値 ※`art`などの文字列は除く
-
-```
-<NG>
-A.sample HREF="#"
-IMG SRC="images/google.png" alt="google"
-
-<OK>
-a.sample href="/"
-img src="images/google.png" alt="google"
-```
-
-
-***
-
 
 <h3 id="quotes_html">HTMLクォーテーション</h3>
 
@@ -206,8 +188,6 @@ script src="js/main.js"
 
 ***
 
-## その他
-
 ### 画像ファイルの命名規則
 
 - [画像ファイルの命名規則](https://qiita.com/okamoai/items/82eff25436fbbafaa063)
@@ -218,7 +198,7 @@ script src="js/main.js"
 - 小文字で命名
 - 特殊文字は使わない、数字からは始めない、単語を区切る場合は`_`で区切る
 
-`[dir名] + ["_"] + [識別名] + [_連番(01~)] + [拡張子]`
+`[dir名] + ["_"] + [識別名] + [状態] + [_連番(01~)] + [拡張子]`
 
 例)
 
@@ -233,3 +213,79 @@ icon_facebook.svg
 navigation_hoge_01.png
 
 ```
+
+***
+
+## slimのルール
+
+<h3 id="div_shortcut">divの省略</h3>
+
+- クラスを指定する場合の`div`は省略すること
+- クラスを指定しない場合は`div`と記述する
+
+例)
+
+```
+<NG>
+div.sample
+  | sample
+
+<OK>
+.sample
+  | sample
+
+div
+  | sample
+```
+
+***
+
+<h3 id="comment">コメントの書き方</h3>
+
+- slimでのコメントは`#`ではなく、`/`を使うこと
+
+例)
+
+```
+<NG>
+# sample_comment
+
+<OK>
+/ sample_comment
+```
+
+***
+
+<h3 id="text">文字列の記述</h3>
+
+- 文字を記述するときはネストとして`|`を通して書く
+
+例)
+
+```
+<NG>
+p sample_text
+
+<OK>
+p
+  | sample_text
+```
+
+***
+
+<h3 id="text_size">タグの大文字/小文字</h3>
+
+- 小文字のみを使用する。
+- HTML要素名、属性、属性値 ※`art`などの文字列は除く
+
+```
+<NG>
+A.sample HREF="#"
+IMG SRC="images/google.png" alt="google"
+
+<OK>
+a.sample href="/"
+img src="images/google.png" alt="google"
+```
+
+***
